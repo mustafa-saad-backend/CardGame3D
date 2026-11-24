@@ -1,0 +1,7 @@
+#version 330 core
+out vec4 FragColor;
+in vec2 TexCoord;
+uniform sampler2D imageTexture;
+uniform int useTexture;
+uniform vec3 objectColor;
+void main(){if(useTexture==1)FragColor=texture(imageTexture,TexCoord);else FragColor=vec4(objectColor,1.0);}
